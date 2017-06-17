@@ -4,6 +4,7 @@
 # 
 # Regions:
 #   us-east-1: Virginia
+#   us-east-2: Ohio
 #   us-west-1: N. California
 #   us-west-2: Oregon
 #   ap-southeast-2: Sydney, AU
@@ -29,13 +30,15 @@ variable "win2012r2_amis" {
 }
 
 # 2016 Base (no containers)
+# This is datacenter edition -- there is no other option
 variable "win2016base_amis" {
   type = "map"
   default = {
     "us-east-1" = "ami-f1b5cfe7"
-    "us-west-1" = ""
-    "us-west-2" = ""
-    "ap-southeast-2" = ""
+    "us-east-2" = "ami-799bbc1c"
+    "us-west-1" = "ami-09406069"
+    "us-west-2" = "ami-c2c3a2a2"
+    "ap-southeast-2" = "ami-bf5743dc"
   }
 }
 
@@ -44,9 +47,10 @@ variable "win2016cont_amis" {
   type = "map"
   default = {
     "us-east-1" = "ami-17106201"
-    "us-west-1" = ""
-    "us-west-2" = ""
-    "ap-southeast-2" = ""
+    "us-east-2" = "ami-b1d2f5d4"
+    "us-west-1" = "ami-1e70517e"
+    "us-west-2" = "ami-f081e590"
+    "ap-southeast-2" = "ami-d78288b4"
   }
 }
 
@@ -55,9 +59,10 @@ variable "win2016nano_amis" {
   type = "map"
   default = {
     "us-east-1" = "ami-8d324d9b"
-    "us-west-1" = ""
-    "us-west-2" = ""
-    "ap-southeast-2" = ""
+    "us-east-2" = "ami-0fdff86a"
+    "us-west-1" = "ami-e3507183"
+    "us-west-2" = "ami-d4d1b5b4"
+    "ap-southeast-2" = "ami-64ada707"
   }
 }
 
